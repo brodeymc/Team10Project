@@ -1,6 +1,8 @@
 ## Riley Powell
  Software Engineering Student
 
+ Email: Rpowel57@students.kennesaw.edu
+
 ------
 
 While I am a currently Studying Software engineering, I am also employed as a maintenance technician trainee at FEDEX Ground. I am always willing to learn something new, and seek opportunities that allow me to do so. 
