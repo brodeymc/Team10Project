@@ -5,7 +5,7 @@ Throughout the remainder of the semester we will be working on a small e-commerc
 
 Below you will find links of everything that you need to know about the project and the team which is working on it.
 
-Meet the Team:
+Meet the Team: https://github.com/brodeymc/Team10Project/blob/main/Riley%20Powell.md
 
 Team Assignments:
 
