@@ -9,7 +9,7 @@ Meet the Team: https://github.com/brodeymc/Team10Project/blob/main/Riley%20Powel
 
 Team Assignments: https://github.com/brodeymc/Team10Project/blob/main/Team%20Assignments.md#team-assignments
 
-Technology Selection:
+Technology Selection: https://github.com/brodeymc/Team10Project/blob/main/Team%20Assignments.md
 
 Project Plan:
 
