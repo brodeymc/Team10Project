@@ -11,6 +11,7 @@ Team Assignments: https://github.com/brodeymc/Team10Project/blob/main/Team%20Ass
 
 Technology Selection: [https://github.com/brodeymc/Team10Project/blob/main/Technology%20Selection.md
 ](https://github.com/brodeymc/Team10Project/blob/main/Technology%20Selection.md)https://github.com/brodeymc/Team10Project/blob/main/Technology%20Selection.md
+
 Project Plan:
 
 Project Plan Video Presentation:
