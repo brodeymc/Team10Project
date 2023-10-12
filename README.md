@@ -12,6 +12,6 @@ Team Assignments: https://github.com/brodeymc/Team10Project/blob/main/Team%20Ass
 Technology Selection: [https://github.com/brodeymc/Team10Project/blob/main/Technology%20Selection.md
 ]
 
-Project Plan:
+Project Plan: https://adkisson-swe-f23.youtrack.cloud/gantt-charts/174-16
 
 Project Plan Video Presentation:
