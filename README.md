@@ -14,4 +14,4 @@ Technology Selection: [https://github.com/brodeymc/Team10Project/blob/main/Techn
 
 Project Plan: https://adkisson-swe-f23.youtrack.cloud/gantt-charts/174-16
 
-Project Plan Video Presentation: https://github.com/brodeymc/Team10Project/commit/e760ec1856a827803cc37d26da172832bb045b7b
+Project Plan Video Presentation: https://github.com/brodeymc/Team10Project/blob/main/2023-10-12%2020-35-35.zip
