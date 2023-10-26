@@ -124,7 +124,7 @@
         - Estimated Effort: 1.5 days
         - Functional
         - Story Description: Users can choose to receive notifications when items in their wish list have price drops or special promotions.
-      - T10S- 3: In-cart Options
+      - T10S-3: In-cart Options
         - Priority: Wants to Have
         - Estimated Effort: 1 day
         - Functional
