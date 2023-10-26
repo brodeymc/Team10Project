@@ -15,41 +15,46 @@
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
-        - Story description: Page for users to view products placed in the cart. There will be a "Pay Now" button that leads to fields to input payment information.
-      - T10S-4: Confirm Order Page
+        - Story description: Page for users to view products placed in the cart, the subtotal, and click on the "Pay Now" button to continue the checkout process. Users will also be given the option to remove products from cart.
+        - T10S-4: Pay Now Page
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
-        - Story description: Page for users to view all information regarding their order and have the option to complete the order which shows a receipt. 
-      - T10S-5: Receipt Page
+        - Story description: Page that prompts user to enter their shipping address, credit card information, phone number, and shipping speed. They will have three speeds to choose from: overnight shipping for $29, 3 day shipping for $19, and ground shipping for free.
+      - T10S-5: Confirm Order Page
+        - Priority: Must Have
+        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Functional or Non-Functional (choose one)
+        - Story description: Page for users to view all information regarding their order, grand total, and have the option to complete the order which shows a receipt. 
+      - T10S-6: Receipt Page
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page for users to view order receipts. The user will be able to press OK on the receipt and return to the main page.
-        - T10S-6: Inventory Update
+        - T10S-7: Inventory Update
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page the user sees when they return to the main page and the inventory the user just bought is gone.
-      - T10S-7: Admin Sales Report
+      - T10S-8: Admin Sales Report
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page for admins to view everything purchased and who purchased it. Needs to have an option to export the sales report to CSV.
-      - T10S-8: Inventory
+      - T10S-9: Inventory
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page for the admims to have access to the inventory and have the ability to add new inventory into the system.
   - Registration and Login
     - T10E-2: Users
-      - T10S-9: User Registration 
+      - T10S-10: User Registration 
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Users must be able to self-register an account with a unique username and a minimum of 6-character long password.
     - T10E-3: Admin
-      -T10S-10: Admin User Creation
+      -T10S-11: Admin User Creation
         - Priority: Must Have 
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
