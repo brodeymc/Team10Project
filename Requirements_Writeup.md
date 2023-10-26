@@ -55,7 +55,7 @@
         - Priority: Wants to Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
-        - Story description: A page for admin to add information and it automatically gets added into database.
+        - Story description: A page for admisn to add information and it automatically gets added into database.
   - Registration and Login
     - T10E-2: Users
       - T10S-12: User Registration 
