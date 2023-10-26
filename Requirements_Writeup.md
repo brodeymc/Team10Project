@@ -1,4 +1,4 @@
-- Version 1
+- Version 01
   - Screens and Applications Mockup
     - T10E-1: Screens
       - T10S-1: User Registration Page
