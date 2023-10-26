@@ -11,14 +11,14 @@ Below you will find links of everything that you need to know about the project,
 - [Brodey McGinnis](https://github.com/brodeymc/Team10Project/blob/main/Brodey%20McGinnis%20SWE%203313%20Resume.md)
 
 ## Team Assignments: 
-[Who is responsiblefor each role in this project?](https://github.com/brodeymc/Team10Project/blob/main/Team%20Assignments.md#team-assignments)
+[Who is responsible for each role in this project?](https://github.com/brodeymc/Team10Project/blob/main/Team%20Assignments.md#team-assignments)
 
 ## Technology Selection: 
 [What technology will be used to implement the project?](https://github.com/brodeymc/Team10Project/blob/main/Technology%20Selection.md)
 
 
 ## Project Plan: 
-[View this porject's Gantt chart](https://adkisson-swe-f23.youtrack.cloud/gantt-charts/174-16)
+[View this project's Gantt chart](https://adkisson-swe-f23.youtrack.cloud/gantt-charts/174-16)
 
 ## Project Plan Video Presentation: 
 [Watch a video presentation explaining out team's project plan](https://github.com/brodeymc/Team10Project/blob/main/Team10ProjectPlan.zip)
