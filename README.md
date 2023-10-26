@@ -22,3 +22,6 @@ Below you will find links of everything that you need to know about the project,
 
 ## Project Plan Video Presentation: 
 [Watch a video presentation explaining our team's project plan](https://github.com/brodeymc/Team10Project/blob/main/Team10ProjectPlan.zip)
+
+##Requirements Introduction:
+
