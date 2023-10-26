@@ -45,7 +45,7 @@
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
-        - Story description: Page for the admims to have access to the inventory and have the ability to add new inventory into the system.
+        - Story description: Page for the admins to have access to the inventory and have the ability to add new inventory into the system.
   - Registration and Login
     - T10E-2: Users
       - T10S-10: User Registration 
