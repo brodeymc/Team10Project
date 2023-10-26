@@ -14,7 +14,7 @@ Below you will find links of everything that you need to know about the project,
 [Who is responsible for each role in this project?](https://github.com/brodeymc/Team10Project/blob/main/Team%20Assignments.md#team-assignments)
 
 ## Technology Selection: 
-[What technology will be used to implement the project?](https://github.com/brodeymc/Team10Project/blob/main/Technology%20Selection.md)
+[What technology will be used to implement the project?](https://github.com/brodeymc/Team10Project/blob/main/Technology_Selection.md)
 
 
 ## Project Plan: 
