@@ -1,4 +1,4 @@
-- Version 1
+# Version 1
   - Screens and Applications Mockup
     - T10E-1: Screens
       - T10S-1: User Registration Page
@@ -64,66 +64,49 @@
         - Functional
         - Story description: Users must be able to login with their username and password that they registered with.
     - T10E-3: Admin
-      -T10S-13: Admin User Creation
+      - T10S-13: Admin User Creation
         - Priority: Must Have 
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional
         - Story description: Active admins must be able to tranform previously registered accounts into admins.
 
-- Version 2
-  -Future Milestone: Enhancements and Expansions
-    -T10E-1: User Reviews and Ratings
-      -T10S-1: User Review Submission
-        -Priority: Needs to Have
-        -Estimated Effort: 1.5 days
-        -Functional
-        -Story Description: Users can submit reviews for items they've purchased. Reviews should include a text description and a rating on a scale of 1 to 5 stars.
-      -T10S-2: Display User Reviews
-        -Priority: Needs to Have
-        -Estimated Effort: 1 day
-        -Functional
-        -Story Description: On the item details page, users can view aggregated user reviews and average ratings for each item.
-    -T10E-2: Inventory Management Enhancements
-      -T10S-3: Multiple Item Pictures
-        -Priority: Needs to Have
-        -Estimated Effort: 2 days
-        -Functional
-        -Story Descrption: Items can now have multiple pictures associated with them. Users can view a gallery of item images.
-      -T10S-4: Inventory Categories
-        -Priority: Needs to Have
-        -Estimated Effort: 2 days
-        -Functional
-        -Items can be categorized into different groups depending on the use, model, brand, etc. Users can filter and browse items by category.
-    -T10E-3: Enhanced Checkout Process
-      -T10S-5: Save Shopping Cart
-        -Priority: Wants to Have
-        -Estimated Effort: 1.5 days
-        -Functional
-        -Story Description: Users can save their shopping cart for later close the site and when they come back it'll be as they left it.
-
-            T10S-6: Guest Checkout
-                Priority: Needs to Have
-                Estimated Effort: 2 days
-                Functional
-                Allow users to make purchases without registering. They can provide shipping information and pay as a guest.
-
-        T10E-4: Improved Administrator Features
-
-             T10S-7: View Sold Items
-                Priority: Needs to Have
-                Estimated Effort: 2 days
-                Functional
-                Admins can view a list of sold items, including buyer information and access related receipts.
-
-            T10S-8: Bulk Inventory Upload
-                Priority: Wants to Have
-                Estimated Effort: 3 days
-                Functional
-                Admins can upload inventory information in bulk, including item details and pictures, using a CSV file.
-
-        T10E-5: User Interface Enhancements
-             T10S-9: User-Friendly Navigation
-                Priority: Must Have
-                Estimated Effort: 3 days
-                Non-Functional
-                Enhance the user interface to improve navigation, making it more user-friendly with intuitive ways to move forward, back, and cancel actions.
+# Version 2
+  - Future Milestone: Enhancements and Expansions
+    - T10E-1: User Reviews and Ratings
+      - T10S-1: User Review Submission
+        - Priority: Needs to Have
+        - Estimated Effort: 1.5 days
+        - Functional
+        - Story Description: Users can submit reviews for items they've purchased. Reviews should include a text description and a rating from 1 to 5 stars.
+      - T10S-2: Display User Reviews
+        - Priority: Needs to Have
+        - Estimated Effort: 1 day
+        - Functional
+        - Story Description: On the item details page, users can view user reviews and average ratings for each item.
+    - T10E-2: Inventory Management Enhancements
+      - T10S-3: Multiple Item Pictures
+        - Priority: Needs to Have
+        - Estimated Effort: 2 days
+        - Functional
+        - Story Descrption: Items can now have multiple pictures associated with them and the users can view a gallery of item images.
+      - T10S-4: Inventory Categories
+        - Priority: Needs to Have
+        - Estimated Effort: 2 days
+        - Functional
+        - Items can be categorized into different groups depending on the use, model, brand, etc.
+      - T10S-5: Filter Search Engine
+        - Priority: Needs to Have
+        - Estimated Effort: 2 days
+        - Functional
+        - Story Description: Give users the ability to filter their searches to only show things from certain brands, certain uses, prices, whether its new or used, or a mix of all the filters.
+      - T10S-6: Guest Checkout
+        - Priority: Needs to Have
+        - Estimated Effort: 2 days
+        - Functional
+        - Story Description: Allow users to make purchases without registering. They can provide shipping information and pay as a guest.
+    - T10E-3: User Interface Enhancements
+      - T10S-7: User-Friendly Navigation
+        - Priority: Needs to Have
+        - Estimated Effort: 3 days
+        - Non-Functional
+        - Enhance the user interface to improve navigation, making it more user-friendly with ways to move forward, back, and cancel actions.
