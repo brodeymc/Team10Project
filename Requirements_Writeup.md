@@ -3,70 +3,70 @@
     - T10E-1: Screens
       - T10S-1: User Registration Page
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1/2 day
         - Non-Functional
         - Story description: Page for users to self register with username and password fields.
       - T10S-2: Available Inventory Page
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1/2 day
         - Non-Functional
         - Story description: Page for users to view the available inventory, sorted by highest to lowest price. Users can search the inventory as well as add items to the cart. Users can press a shopping cart button to go to the shopping cart screen.
       - T10S-3: Items for Sale Page
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 3/4 day
         - Non-Functional 
         - Story description: Page with a description of an item the user searches up with the name of the product, a picture of it, and a price.
       - T10S-4: Shopping Cart Page
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 3/4 day
         - Non-Functional 
         - Story description: Page for users to view products placed in the cart, the subtotal, and click on the "Pay Now" button to continue the checkout process. Users will also be given the option to remove products from cart, cart can't be empty in order to checkout.
       - T10S-5: Pay Now Page
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1 day
         - Non-Functional
         - Story description: Page that prompts user to enter their shipping address, credit card information, phone number, and shipping speed. They will have three speeds to choose from: overnight shipping for $29, 3 day shipping for $19, and ground shipping for free.
       - T10S-6: Confirm Order Page
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1/4 day
         - Non-Functional
         - Story description: Page for users to view all information regarding their order, grand total, and have the option to complete the order which shows a receipt. 
       - T10S-7: Receipt Page
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1/2 day
         - Non-Functional
         - Story description: Page for users to view order receipts. The user will be able to press OK on the receipt and return to the main page.
       - T10S-8: Inventory Update
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1 day
         - Non-Functional
         - Story description: Page the user sees when they return to the main page and the inventory the user just bought is gone.
       - T10S-9: Admin Sales Report
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 2 days
         - Non-Functional
         - Story description: Page for admins to view everything purchased and who purchased it. Needs to have an option to export the sales report to CSV.
       - T10S-10: Inventory
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 2 days
         - Non-Functional 
         - Story description: Page for the admins to have access to the inventory and have the ability to add new inventory into the system.
   - Registration and Login
     - T10E-2: Users
       - T10S-11: User Registration 
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1 day
         - Functional
         - Story description: Users must be able to self-register an account with a unique username and a minimum of 6-character long password.
      - T10S-12: User Login 
         - Priority: Must Have
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1 day
         - Functional
         - Story description: Users must be able to login with their username and password that they registered with.
     - T10E-3: Admin
       - T10S-13: Admin User Creation
         - Priority: Need to Have 
-        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Estimated Effort: 1/2 day
         - Functional
         - Story description: Active admins must be able to tranform previously registered accounts into admins.
 
@@ -118,19 +118,24 @@
         - Priority: Wants to Have
         - Estimated Effort: 1.5 days
         - Functional
-        - Story Description: Users can create and manage wish lists of items they are interested in purchasing in the future. Users can have multiple wishlist and title them.
+        - Story Description: Users can create and manage wish lists of items they are interested in purchasing in the future. Users can have multiple wish lists and title them.
       - T10S-2: Notify on Price Drop
         - Priority: Wants to Have
         - Estimated Effort: 1.5 days
         - Functional
         - Story Description: Users can choose to receive notifications when items in their wish list have price drops or special promotions.
+      - T10S- 3: In-cart Options
+        - Priority: Wants to Have
+        - Estimated Effort: 1 day
+        - Functional
+        - Story Description: Users will be given the option to change the quantity of products in cart and to save them for later at the screen before paying.
     - T10E-2: Enhanced Product Reviews
-      - T10S-3: Video Reviews
+      - T10S-4: Video Reviews
         - Priority: Wants to Have
         - Estimated Effort: 2 days
         - Functional
         - Story Description: Users can post their own video reviews of the product(s) they purchased.
-      - T10S-4: Review Comparison
+      - T10S-5: Review Comparison
         -Priority: Wants to Have
         - Estimated Effort: 1.5 days
         - Functional
