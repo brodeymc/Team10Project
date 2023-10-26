@@ -113,7 +113,7 @@
 
 # Version 3
   - Future Milestone: Advanced Features and Optimization
-    - T10E-1: User Wish Lists
+    - T10E-1: User Preferences 
       - T10S-1: User Wish List Creation
         - Priority: Wants to Have
         - Estimated Effort: 1.5 days
@@ -123,10 +123,5 @@
         - Priority: Wants to Have
         - Estimated Effort: 1.5 days
         - Functional
-        - Story Description: Users receive notifications when items in their wish list have price drops or special promotions.
-    - T10E-2: Enhanced Search
-      - T10S-3: Advanced Search Filters
-        - Priority: Wants to Have
-        - Estimated Effort: 2 days
-        - Functional
-        - Story Description: Improve the search functionality by adding advanced filters such as price range, brand, and user ratings.
+        - Story Description: Users can choose to receive notifications when items in their wish list have price drops or special promotions.
+    - T10E-2: Enhanced 
