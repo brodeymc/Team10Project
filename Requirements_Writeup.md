@@ -58,13 +58,13 @@
         - Story description: A page for admin to add information and it automatically gets added into database.
   - Registration and Login
     - T10E-2: Users
-      - T10S-11: User Registration 
+      - T10S-12: User Registration 
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Users must be able to self-register an account with a unique username and a minimum of 6-character long password.
     - T10E-3: Admin
-      -T10S-12: Admin User Creation
+      -T10S-13: Admin User Creation
         - Priority: Must Have 
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
