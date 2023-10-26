@@ -39,6 +39,11 @@
         - Functional or Non-Functional (choose one)
         - Story description: Users must be able to register an account with a unique username and a minimum of 6-character long password.
     - T10E-3: Admin
+      -T10S-8: Admin Creation
+        - Priority: Must Have 
+        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Functional or Non-Functional (choose one)
+        - Story description: Active admins must be able to tranform previously registered accounts into admins.
 
 - Version 2
 
