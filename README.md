@@ -8,7 +8,7 @@ Below you will find links of everything that you need to know about the project,
 ## Meet the Team:  
 - [Riley Powell](https://github.com/brodeymc/Team10Project/blob/main/Riley%20Powell.md)
 - [Giovanni Zavala](https://github.com/brodeymc/Team10Project/blob/main/SWE%203313%20Giovanni's%20Resume.md)
-- [Brodey McGinnis](https://github.com/brodeymc/Team10Project/blob/main/Brodey%20McGinnis%20SWE%203313%20Resume.md)
+- [Brodey McGinnis](https://github.com/brodeymc/Team10Project/blob/main/Brodey_McGinnis_SWE_3313_Resume.md)
 
 ## Team Assignments: 
 [Who is responsible for each role in this project?](https://github.com/brodeymc/Team10Project/blob/main/Team_Assignments.md)
