@@ -42,7 +42,7 @@
         - Non-Functional
         - Story description: Page the user sees when they return to the main page and the inventory the user just bought is gone.
       - T10S-9: Admin Sales Report
-        - Priority: Need to Have
+        - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Non-Functional
         - Story description: Page for admins to view everything purchased and who purchased it. Needs to have an option to export the sales report to CSV.
@@ -118,7 +118,7 @@
         - Priority: Wants to Have
         - Estimated Effort: 1.5 days
         - Functional
-        - Story Description: Users can create and manage wish lists of items they are interested in purchasing in the future.
+        - Story Description: Users can create and manage wish lists of items they are interested in purchasing in the future. Users can have multiple wishlist and title them.
       - T10S-2: Notify on Price Drop
         - Priority: Wants to Have
         - Estimated Effort: 1.5 days
