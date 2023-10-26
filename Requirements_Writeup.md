@@ -124,4 +124,14 @@
         - Estimated Effort: 1.5 days
         - Functional
         - Story Description: Users can choose to receive notifications when items in their wish list have price drops or special promotions.
-    - T10E-2: Enhanced 
+    - T10E-2: Enhanced Product Reviews
+      - T10S-3: Video Reviews
+        - Priority: Wants to Have
+        - Estimated Effort: 2 days
+        - Functional
+        - Story Description: Users can post their own video reviews of the product(s) they purchased.
+      - T10S-4: Review Comparison
+        -Priority: Wants to Have
+        - Estimated Effort: 1.5 days
+        - Functional
+        - Story Description: Users can see side-by-side reviews of the same product, but from different brands and they can choose the brands and models.
