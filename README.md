@@ -6,7 +6,7 @@ Throughout the remainder of the semester we will be working on a small e-commerc
 Below you will find links of everything that you need to know about the project, and the team who is working on it.
 
 ## Meet the Team:  
-- [Riley Powell](https://github.com/brodeymc/Team10Project/blob/main/Riley%20Powell.md)
+- [Riley Powell](https://github.com/brodeymc/Team10Project/blob/main/Riley_Powell.md)
 - [Giovanni Zavala](https://github.com/brodeymc/Team10Project/blob/main/Giovanni's_Resume.md)
 - [Brodey McGinnis](https://github.com/brodeymc/Team10Project/blob/main/Brodey_McGinnis_SWE_3313_Resume.md)
 
