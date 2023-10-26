@@ -11,7 +11,7 @@ Below you will find links of everything that you need to know about the project,
 - [Brodey McGinnis](https://github.com/brodeymc/Team10Project/blob/main/Brodey%20McGinnis%20SWE%203313%20Resume.md)
 
 ## Team Assignments: 
-[Who is responsible for each role in this project?](https://github.com/brodeymc/Team10Project/blob/main/Team%20Assignments.md#team-assignments)
+[Who is responsible for each role in this project?](https://github.com/brodeymc/Team10Project/blob/main/Team_Assignments.md)
 
 ## Technology Selection: 
 [What technology will be used to implement the project?](https://github.com/brodeymc/Team10Project/blob/main/Technology_Selection.md)
