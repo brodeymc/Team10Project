@@ -31,7 +31,7 @@
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page for users to view order receipts. The user will be able to press OK on the receipt and return to the main page.
-        - T10S-7: Inventory Update
+      - T10S-7: Inventory Update
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
