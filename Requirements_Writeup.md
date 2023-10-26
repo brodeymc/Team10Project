@@ -42,7 +42,7 @@
         - Non-Functional
         - Story description: Page the user sees when they return to the main page and the inventory the user just bought is gone.
       - T10S-9: Admin Sales Report
-        - Priority: Must Have
+        - Priority: Need to Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Non-Functional
         - Story description: Page for admins to view everything purchased and who purchased it. Needs to have an option to export the sales report to CSV.
@@ -65,7 +65,7 @@
         - Story description: Users must be able to login with their username and password that they registered with.
     - T10E-3: Admin
       - T10S-13: Admin User Creation
-        - Priority: Must Have 
+        - Priority: Need to Have 
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional
         - Story description: Active admins must be able to tranform previously registered accounts into admins.
@@ -110,3 +110,23 @@
         - Estimated Effort: 3 days
         - Non-Functional
         - Enhance the user interface to improve navigation, making it more user-friendly with ways to move forward, back, and cancel actions.
+
+# Version 3
+  - Future Milestone: Advanced Features and Optimization
+    - T10E-1: User Wish Lists
+       - T10S-1: User Wish List Creation
+        - Priority: Wants to Have
+        - Estimated Effort: 1.5 days
+        - Functional
+        - Story Description: Users can create and manage wish lists of items they are interested in purchasing in the future.
+      - T10S-2: Notify on Price Drop
+        - Priority: Wants to Have
+        - Estimated Effort: 1.5 days
+        - Functional
+        - Story Description: Users receive notifications when items in their wish list have price drops or special promotions.
+    - T10E-2: Enhanced Search
+      - T10S-3: Advanced Search Filters
+        - Priority: Wants to Have
+        - Estimated Effort: 2 days
+        - Functional
+        - Story Description: Improve the search functionality by adding advanced filters such as price range, brand, and user ratings.
