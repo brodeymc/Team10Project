@@ -5,8 +5,8 @@ Here you will find all the information for the requirements of the project. Belo
  ## **Case Diagram**: 
 [Case Diagram](https://github.com/brodeymc/Team10Project/blob/main/Use_Case_Diagram.png)
 ## **Decision Table**:
-[Decision Table](https://github.com/brodeymc/Team10Project/blob/main/Decision_Table.png)
+[Look at the decision table](https://github.com/brodeymc/Team10Project/blob/main/Decision_Table.png)
 ## **Requirements Writing**:
-[Take a look at our requirements](https://github.com/brodeymc/Team10Project/blob/main/Requirements_Writeup.md)
+[See what's required](https://github.com/brodeymc/Team10Project/blob/main/Requirements_Writeup.md)
 
 ## **Presentation**:
