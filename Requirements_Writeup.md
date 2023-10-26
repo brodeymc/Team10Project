@@ -114,7 +114,7 @@
 # Version 3
   - Future Milestone: Advanced Features and Optimization
     - T10E-1: User Wish Lists
-       - T10S-1: User Wish List Creation
+      - T10S-1: User Wish List Creation
         - Priority: Wants to Have
         - Estimated Effort: 1.5 days
         - Functional
