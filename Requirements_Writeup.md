@@ -26,20 +26,30 @@
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page for users to view order receipts. The user will be able to press OK on the receipt and return to the main page.
-      - T10S-6: Admin Sales Report
+        - T10S-6: Inventory Update
+        - Priority: Must Have
+        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Functional or Non-Functional (choose one)
+        - Story description: Page the user sees when they return to the main page and the inventory the user just bought is gone.
+      - T10S-7: Admin Sales Report
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page for admins to view everything purchased and who purchased it. Needs to have an option to export the sales report to CSV.
-  - Registration and Login
-    - T10E-2: Users
-      - T10S-7: User Registration 
+      - T10S-8: Inventory
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
-        - Story description: Users must be able to register an account with a unique username and a minimum of 6-character long password.
+        - Story description: Page for the admims to have access to the inventory and have the ability to add new inventory into the system.
+  - Registration and Login
+    - T10E-2: Users
+      - T10S-9: User Registration 
+        - Priority: Must Have
+        - Estimated Effort (no less than 1/4 day, no greater than 5 days)
+        - Functional or Non-Functional (choose one)
+        - Story description: Users must be able to self-register an account with a unique username and a minimum of 6-character long password.
     - T10E-3: Admin
-      -T10S-8: Admin Creation
+      -T10S-10: Admin User Creation
         - Priority: Must Have 
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
