@@ -16,7 +16,7 @@
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
         - Story description: Page for users to view products placed in the cart, the subtotal, and click on the "Pay Now" button to continue the checkout process. Users will also be given the option to remove products from cart.
-        - T10S-4: Pay Now Page
+      - T10S-4: Pay Now Page
         - Priority: Must Have
         - Estimated Effort (no less than 1/4 day, no greater than 5 days)
         - Functional or Non-Functional (choose one)
