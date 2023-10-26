@@ -3,7 +3,7 @@
 Here you will find all the information for the requirements of the project. Below you will see the links for the case diagram, decision table, the requirements themselves, and the presentation.
 
  ## **Case Diagram**: 
-
+[Case Diagram](https://github.com/brodeymc/Team10Project/blob/main/Screenshot%20(7).png)
 ## **Decision Table**:
 [Decision Table](https://github.com/brodeymc/Team10Project/blob/main/Decision_Table.png)
 ## **Requirements Writing**:
