@@ -25,3 +25,6 @@ Below you will find links of everything that you need to know about the project,
 
 ## Requirements Introduction:
 [Look at our introduction to requirements](https://github.com/brodeymc/Team10Project/blob/main/Requirements_Introduction.md)
+
+## User Interface Design:
+[Look at our UI introduction](https://github.com/brodeymc/Team10Project/blob/main/User_Interface_Design.md)
