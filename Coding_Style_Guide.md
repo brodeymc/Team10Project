@@ -16,8 +16,6 @@ The only exemption is constants, which should be written in all-caps with words 
 Names should be descriptive enough to be understood within the context of a method, but not overly descriptive. 
 ## Formatting
 Formatting is important to keep the program readable. While developers have individual preferences for formatting, it is important to maintain consistency within the program.
-### Indentations
-Inconsistent indentations make navigating a program difficult. We will be using indentations of 2 spaces throughout our program.
 ### Braces
 Braces should be placed on individual lines, not on the end of a line.
 
