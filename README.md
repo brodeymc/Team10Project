@@ -28,3 +28,6 @@ Below you will find links of everything that you need to know about the project,
 
 ## User Interface Design:
 [Look at our UI introduction](https://github.com/brodeymc/Team10Project/blob/main/User_Interface_Design.md)
+
+## Technical Design:
+]Look at our technical design introduction]()
