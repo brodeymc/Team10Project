@@ -1,5 +1,5 @@
 # Technical Design Introduction
-Here you have access to the coding style guide, the data storage plan, the database seed data, the ERD, the table of field description, our sample data, and our presentation.
+Here you have access to the coding style guide, the implementation language and implementation framework, the data storage plan, the database seed data, the ERD, the table of field description, our sample data, and our presentation.
 
 ## **Coding Style Guide**: 
 [Coding Style Guide](https://github.com/brodeymc/Team10Project/blob/main/Coding_Style_Guide.md)
@@ -13,5 +13,7 @@ Here you have access to the coding style guide, the data storage plan, the datab
 [Table of Field Description]()
 ## **Sample Data**: 
 [Sample Data](https://github.com/brodeymc/Team10Project/blob/main/SampleData.PNG)
+## **Implementation Langauge and Implementation Framework:
+[Language and Implementation Framework]()
 ## **Presentation**:
 [Presentation]()
