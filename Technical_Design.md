@@ -13,7 +13,7 @@ Here you have access to the coding style guide, the implementation language and 
 [Table of Field Description]()
 ## **Sample Data**: 
 [Sample Data](https://github.com/brodeymc/Team10Project/blob/main/SampleData.PNG)
-## **Implementation Langauge and Implementation Framework:
-[Language and Implementation Framework]()
+## **Implementation Langauge and Implementation Framework**:
+[Language and Framework Implementation]()
 ## **Presentation**:
 [Presentation]()
