@@ -8,6 +8,5 @@ Here you will find all the information for the requirements of the project. Belo
 [Look at the decision table](https://github.com/brodeymc/Team10Project/blob/main/Decision_Table.png)
 ## **Requirements Writing**:
 [See what's required](https://github.com/brodeymc/Team10Project/blob/main/Requirements_Writeup.md)
-
 ## **Presentation**:
 [Here is our video presentation](https://youtu.be/GqVNGcGToz0)
