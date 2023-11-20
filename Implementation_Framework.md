@@ -3,7 +3,7 @@
 - We chose Java for its flexibility and easy usability 
 - Our storage is going to be through Microsoft SQL
 - Java and MSQL are extremely compatible and used for highly secure applications.
-- Here is a [step by step guide](https://www.javatpoint.com/example-to-connect-to-the-mysql-database) for inking SQL and JAVA and some example data. 
+- Here is a [step by step guide](https://www.javatpoint.com/example-to-connect-to-the-mysql-database) for linking SQL and JAVA and some example data. 
 -  [Explains](https://www.tutorialspoint.com/java/index.htm) why to use JAVA and what is good for
 
 
