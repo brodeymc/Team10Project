@@ -10,7 +10,7 @@ Here you have access to the coding style guide, the implementation language and 
 ## **Entity Relationship Diagram**: 
 [ERD](https://github.com/brodeymc/Team10Project/blob/main/ERD.PNG)
 ## **Table of Field Description**: 
-[Table of Field Description]()
+[Table of Field Description](https://github.com/brodeymc/Team10Project/blob/main/Table_of_Field_Descriptions.md)
 ## **Sample Data**: 
 [Sample Data](https://github.com/brodeymc/Team10Project/blob/main/SampleData.PNG)
 ## **Implementation Langauge and Implementation Framework**:
