@@ -1,0 +1,18 @@
+
+
+## Implementation Language:
+
+ - Java
+ - We chose Java for its flexibility and easy usability 
+ - Our storage is going to be through Microsoft SQL
+ - Java and MSQL are extremely compatible and used for highly secure applications.
+ - [https://www.javatpoint.com/example-to-connect-to-the-mysql-database]Step By step guide for Linking SQL and JAVA and some example data. 
+- (https://www.tutorialspoint.com/java/index.htm) Explains why to use JAVA and what is good for
+
+
+## Implementation Framework
+- Swing
+- We will be using swing as it is easily connected to java VIA the intellij IDEA IDE.
+(https://docs.oracle.com/javase/tutorial/uiswing/) This website is great for learning swing, It provides you information from beginner to master.
+- (https://www.youtube.com/watch?v=6zm8c6QFmjo&ab_channel=Intellipaat) This video provides some background information as well as examples on how to use SWING
+ 
