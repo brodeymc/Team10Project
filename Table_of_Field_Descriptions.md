@@ -1,4 +1,4 @@
-# **Table of Field Description**
+# **Table of Field Descriptions**
 Here you can find a description of every field and of every entity along with the data type:
 
 ## **Entity**: Product
