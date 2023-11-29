@@ -103,6 +103,7 @@ sign up with different user names. and make one person an admin
             @Override
             public void onReturn() {
                 shoppingCart.clear();
+                shoppingCartPage.updateCart();
                 cardLayout.show(cardPanel, "inventoryPage");
             }
         });
