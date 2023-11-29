@@ -191,8 +191,16 @@ interface ReceiptListener {
     void onReturn();
 }
 
-public LoginSignupPage() {
-        setLayout(new GridLayout(3,2));
+class LoginSignupPage extends JPanel {
+    private JTextField usernameField;
+    private JPasswordField passwordField;
+    private JButton loginButton;
+    private JButton signupButton;
+
+    private LoginSignupListener listener;
+
+    public LoginSignupPage() {
+        setLayout(new GridLayout(4, 2));
 
         usernameField = new JTextField(30);
         passwordField = new JPasswordField(30);
@@ -200,13 +208,10 @@ public LoginSignupPage() {
         signupButton = new JButton("Signup");
 
 
-
-
-        add(new JLabel("    Username:"));
+        add(new JLabel("Username:"));
         add(usernameField);
-        add(new JLabel("    Password:"));
+        add(new JLabel("Password:"));
         add(passwordField);
-        JPanel buttonPanel = new JPanel();
         add(loginButton);
         add(signupButton);
 
