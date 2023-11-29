@@ -9,6 +9,7 @@ public class ECommerceApp extends JFrame {
     private CardLayout cardLayout;
     private JPanel cardPanel;
     private LoginSignupPage loginSignupPage;
+    private SignUpPage signUpPage;
     private InventoryPage inventoryPage;
     private ShoppingCartPage shoppingCartPage;
     private ConfirmationPage confirmationPage;
@@ -36,7 +37,7 @@ public class ECommerceApp extends JFrame {
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
-        // Create Login/Signup page
+        // Create Login page
         loginSignupPage = new LoginSignupPage();
         loginSignupPage.setLoginSignupListener(new LoginSignupListener() {
             @Override
@@ -52,9 +53,17 @@ public class ECommerceApp extends JFrame {
             @Override
             public void onSignup() {
                 // Implement signup logic
+                cardLayout.show(cardPanel, "signUpPage");
             }
         });
-
+    // Create Signup Page
+        signUpPage = new SignUpPage();
+        signUpPage.setSignupListener(new SignUpListener() {
+            @Override
+            public void onSignUp() {
+                cardLayout.show(cardPanel, "inventoryPage");
+            }
+        });
         // Create Inventory page
         inventoryPage = new InventoryPage(inventory);
         inventoryPage.setInventoryListener(new InventoryListener() {
@@ -116,6 +125,7 @@ public class ECommerceApp extends JFrame {
         cardPanel.add(shoppingCartPage, "shoppingCartPage");
         cardPanel.add(confirmationPage, "confirmationPage");
         cardPanel.add(receiptPage, "receiptPage");
+        cardPanel.add(signUpPage, "signUpPage");
 
         // Show login/signup page initially
         cardLayout.show(cardPanel, "loginSignupPage");
@@ -170,6 +180,9 @@ class Item {
 interface LoginSignupListener {
     void onLogin(String username, String password);
     void onSignup();
+}
+interface SignUpListener {
+    void onSignUp();
 }
 
 interface InventoryListener {
@@ -236,6 +249,47 @@ class LoginSignupPage extends JPanel {
     public void setLoginSignupListener(LoginSignupListener listener) {
         this.listener = listener;
     }
+}
+
+// Sign-Up page, needs to record username and password and integrate with database
+class SignUpPage extends JPanel{
+
+    private SignUpListener listener;
+    private JTextField usernameField;
+    private JPasswordField passwordField;
+    private JButton acceptButton;
+
+    public SignUpPage() {
+        setLayout(new GridLayout(4, 2));
+
+        usernameField = new JTextField(30);
+        passwordField = new JPasswordField(30);
+        acceptButton = new JButton("Accept");
+
+
+
+        add(new JLabel("Username:"));
+        add(usernameField);
+        add(new JLabel("Password:"));
+        add(passwordField);
+        add(acceptButton);
+
+
+
+        acceptButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                listener.onSignUp();
+            }
+        });
+
+    }
+
+    public void setSignupListener(SignUpListener listener) {
+        this.listener = listener;
+    }
+
 }
 
 class InventoryPage extends JPanel {
