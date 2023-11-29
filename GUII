@@ -23,10 +23,8 @@ public class ECommerceApp extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Initialize inventory,, Here is where we need to have the database feeding in items with prices, I think I made the fields
-to small so all the data is not feeding onto the page. also we need to figure out how to properly link the image i put the full 
-file path but I got nothing to show up on the UI.. Please look this over.
-        inventory = new ArrayList<>();
+        // Initialize inventory,, Here is where we need to have the database feeding in items with prices, I think I made the fields to small so all the data is not feeding onto the page. also we need to figure out how to properly link the image i put the fullfile path but I got nothing to show up on the UI.. Please look this over.
+                inventory = new ArrayList<>();
         inventory.add(new Item("Nvidia GEFORCE RTX 3080", "High performance Gaming Graphics card", 400.99, "C:\\Users\\Rpowe\\OneDrive\\Pictures\\Table5.PNG"));
         inventory.add(new Item("AMD Ryzen 5500", "Mid-level gaming processor, can handle most newer games", 129.99, "item2.jpg"));
         inventory.add(new Item("Asus B550 Motherboard", "Affordable gaming motherboard", 85.00, "item3.jpg"));
@@ -38,8 +36,7 @@ file path but I got nothing to show up on the UI.. Please look this over.
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
-        // Create Login/Signup page This page looks good, all we need toi do here is make sure we can actually
-sign up with different user names. and make one person an admin
+        // Create Login/Signup page This page looks good, all we need toi do here is make sure we can actuallysign up with different user names. and make one person an admin
         loginSignupPage = new LoginSignupPage();
         loginSignupPage.setLoginSignupListener(new LoginSignupListener() {
             @Override
@@ -58,7 +55,7 @@ sign up with different user names. and make one person an admin
             }
         });
 
-        // Create Inventory page, here we need to link the data base with prices and limited quantity 
+        // Create Inventory page, here we need to link the data base with prices and limited quantity
         inventoryPage = new InventoryPage(inventory);
         inventoryPage.setInventoryListener(new InventoryListener() {
             @Override
@@ -80,6 +77,9 @@ sign up with different user names. and make one person an admin
             public void onCheckout() {
                 cardLayout.show(cardPanel, "confirmationPage");
             }
+            public void onReturn() {
+                cardLayout.show(cardPanel, "inventoryPage");
+            }
         });
 
         // Create Confirmation page, information needs to show up here with the prices and everything that Im missing.
@@ -89,6 +89,8 @@ sign up with different user names. and make one person an admin
             public void onConfirm() {
                 // Implement order processing logic, we need to add information on this page
                 cardLayout.show(cardPanel, "receiptPage");
+                shoppingCart.clear();
+                shoppingCartPage.updateCart();
             }
 
             @Override
@@ -102,8 +104,7 @@ sign up with different user names. and make one person an admin
         receiptPage.setReceiptListener(new ReceiptListener() {
             @Override
             public void onReturn() {
-                shoppingCart.clear();
-                shoppingCartPage.updateCart();
+
                 cardLayout.show(cardPanel, "inventoryPage");
             }
         });
@@ -176,6 +177,7 @@ interface InventoryListener {
 
 interface CartListener {
     void onCheckout();
+    void onReturn();
 }
 
 interface ConfirmationListener {
@@ -296,6 +298,8 @@ class ShoppingCartPage extends JPanel {
     private JList<Item> cartList;
     private JButton checkoutButton;
 
+    private JButton cartReturnButton;
+
     private List<Item> shoppingCart;
     private CartListener listener;
 
@@ -314,9 +318,20 @@ class ShoppingCartPage extends JPanel {
                 listener.onCheckout();
             }
         });
+        cartReturnButton = new JButton(("Return"));
+        cartReturnButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                listener.onReturn();
+            }
+        });
 
         add(new JScrollPane(cartList), BorderLayout.CENTER);
-        add(checkoutButton, BorderLayout.SOUTH);
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(checkoutButton);
+        buttonPanel.add(cartReturnButton);
+        add(buttonPanel, BorderLayout.SOUTH);
+
     }
 
     public void updateCart() {
