@@ -109,6 +109,7 @@ public class ECommerceApp extends JFrame {
             @Override
             public void onConfirm() {
                 // Implement order processing logic, we need to add information on this page
+                receiptPage= new ReceiptPage(shoppingCart);
                 cardLayout.show(cardPanel, "receiptPage");
                 shoppingCart.clear();
                 shoppingCartPage.updateCart();
@@ -121,7 +122,7 @@ public class ECommerceApp extends JFrame {
         });
 
         // Create Receipt page
-        receiptPage = new ReceiptPage();
+        receiptPage = new ReceiptPage(shoppingCart);
         receiptPage.setReceiptListener(new ReceiptListener() {
             @Override
             public void onReturn() {
@@ -448,16 +449,66 @@ class ShoppingCartPage extends JPanel {
     public void setCartListener(CartListener listener) {
         this.listener = listener;
     }
+
 }
 
 class ConfirmationPage extends JPanel {
     private JButton confirmButton;
     private JButton cancelButton;
 
+    private JTextField creditCardField;
+    private JTextField expirationF;
+    private JTextField cvvF;
+
+    private JTextField emailAddressF;
+    private JTextField phoneNumberF;
+    private JTextField addressF;
+    private JComboBox<String> shippingCombo;
+
     private ConfirmationListener listener;
 
     public ConfirmationPage() {
-        setLayout(new GridLayout(2, 1));
+        setLayout(new GridLayout(8, 2));
+
+        //Current living address
+        add(new JLabel("Address: "));
+        addressF = new JTextField();
+        add(addressF);
+
+        //credit card information
+        add(new JLabel("Credit Card: "));
+        creditCardField = new JTextField();
+        add(creditCardField);
+
+        //EXP date
+        add(new JLabel("Expiration Date (MM/YYYY): "));
+        expirationF = new JTextField();
+        add(expirationF);
+
+        //CVV
+        add(new JLabel("CVV: "));
+        cvvF = new JTextField();
+        add(cvvF);
+
+        //Email Address
+        add(new JLabel("Email Address: "));
+        emailAddressF = new JTextField();
+        add(emailAddressF);
+
+        //Phone number
+
+        add(new JLabel("Phone Number: "));
+        phoneNumberF = new JTextField();
+        add(phoneNumberF);
+
+        //Shipping preferences
+        add(new JLabel("Shipping Preference: "));
+        String[] shippingOptions ={"Standard $0.00", "Express $6.99", "Overnight $15.99"};
+        shippingCombo = new JComboBox<>(shippingOptions);
+        add(shippingCombo);
+
+
+        //confirmation button
 
         confirmButton = new JButton("Confirm");
         confirmButton.addActionListener(new ActionListener() {
@@ -466,7 +517,7 @@ class ConfirmationPage extends JPanel {
                 listener.onConfirm();
             }
         });
-
+//cancel button
         cancelButton = new JButton("Cancel");
         cancelButton.addActionListener(new ActionListener() {
             @Override
@@ -482,15 +533,53 @@ class ConfirmationPage extends JPanel {
     public void setConfirmationListener(ConfirmationListener listener) {
         this.listener = listener;
     }
+    public String getShippingAddress(){
+        return addressF.getText();
+    }
+
+    public String getCardNumber() {
+        return creditCardField.getText();
+    }
+
+    public String getExpirationDate() {
+        return expirationF.getText();
+    }
+
+    public String getVV() {
+        return cvvF.getText();
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumberF.getText();
+    }
+
+    public String getEmail() {
+        return emailAddressF.getText();
+    }
+
+    public String getShippingPreference() {
+        return (String) shippingCombo.getSelectedItem();
+    }
+
+
+
 }
+
 
 class ReceiptPage extends JPanel {
     private JButton returnButton;
+    private JTextArea receiptArea;
 
     private ReceiptListener listener;
 
-    public ReceiptPage() {
+    public ReceiptPage(List<Item> purchasedI) {
         setLayout(new BorderLayout());
+
+        receiptArea = new JTextArea();
+        receiptArea.setEditable(false);
+
+        JScrollPane scroll = new JScrollPane(receiptArea);
+        add(scroll, BorderLayout.CENTER);
 
         returnButton = new JButton("Return");
         returnButton.addActionListener(new ActionListener() {
@@ -501,12 +590,30 @@ class ReceiptPage extends JPanel {
         });
 
         add(returnButton, BorderLayout.SOUTH);
+
+        displayR(purchasedI);
     }
 
     public void setReceiptListener(ReceiptListener listener) {
         this.listener = listener;
     }
+
+    private void displayR(List<Item> purchasedI) {
+        StringBuilder receiptT = new StringBuilder();
+        double tAmount = 0;
+        receiptT.append("Receipt: \n\n");
+        for (Item item : purchasedI) {
+            receiptT.append(item.getName()).append("\n");
+            receiptT.append("Description: ").append(item.getDescription()).append("\n");
+            receiptT.append("Price :$").append(item.getPrice()).append("\n");
+            receiptT.append("\n");
+            tAmount += item.getPrice();
+        }
+        receiptT.append("Total: $").append(tAmount).append("\n");
+        receiptArea.setText(receiptT.toString());
+    }
 }
+
 
 class SalesReport extends JPanel {
     private JButton logOutButton;
