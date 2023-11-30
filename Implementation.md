@@ -23,6 +23,8 @@ Welcome to Computer World our E-Commerce computer parts store! This Java-based a
 - Browse and Shop: Explore our extensive collection of computer parts, from powerful processors to sleek graphics cards. Our intuitive interface makes it easy to find the perfect components for your setup.
 - Cart Management: Add items to your cart and review your selection before making a purchase. Experience a hassle-free shopping journey with our straightforward checkout process.
 - Shipping Information: Provide your shipping and contact details during checkout to ensure a smooth delivery process. We value your time and convenience.
+- Reciepts: At the end of every transaction the user will be prompted with a reciept of the transaction, shipping info, contact info which was provided, and few other small things.
+- Admin Powers: There will be admins that will have some extra abilities such as running sales reports, changing inventory, and making other users into admins.
 
 ### Environment Requirements
 - This can be run on all of the following operating systems:
