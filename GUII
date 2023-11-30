@@ -29,6 +29,8 @@ public class ECommerceApp extends JFrame {
         inventory.add(new Item("Nvidia GEFORCE RTX 3080", "High performance Gaming Graphics card", 400.99, "item1.jpg"));
         inventory.add(new Item("AMD Ryzen 5500", "Mid-level gaming processor, can handle most newer games", 129.99, "item2.jpg"));
         inventory.add(new Item("Asus B550 Motherboard", "Affordable gaming motherboard", 85.00, "item3.jpg"));
+        inventory.add(new Item("Samsung- 870 EVO 1TB Internal SSD SATA","Allows users to store up to 1000 extra Gbs of space",92.99,"\\u202AC:\\Users\\Rpowe\\OneDrive\\Pictures\\SSD.PNG"));
+        inventory.add(new Item("HyperX Cloud 2 - wired Gaming Headset", "Designed for comfort, provides excellent sound for an affordable cost",99.99,"Item5.jpg"));
 
         // Initialize shopping cart
         shoppingCart = new ArrayList<>();
@@ -452,7 +454,7 @@ class ShoppingCartPage extends JPanel {
         }
         double Tax= Price * 0.06;
         double priceWithTax = Price + Tax;
-        showPrice.setText(String.format("Total: %.2f (incl. 6%% tax: %.2f)", priceWithTax, Tax));
+        showPrice.setText(String.format("Total: %.2f (including 6%% tax: %.2f)", priceWithTax, Tax));
     }
 
     public void setCartListener(CartListener listener) {
