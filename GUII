@@ -14,7 +14,7 @@ public class ECommerceApp extends JFrame {
     private ShoppingCartPage shoppingCartPage;
     private ConfirmationPage confirmationPage;
     private ReceiptPage receiptPage;
-
+    private SalesReport salesReport;
     private List<Item> inventory;
     private List<Item> shoppingCart;
 
@@ -45,7 +45,10 @@ public class ECommerceApp extends JFrame {
                 // Simplified authentication, We need to add more advanced authentication
                 if ("user".equals(username) && "password".equals(password)) {
                     cardLayout.show(cardPanel, "inventoryPage");
-                } else {
+                } else if ("admin".equals(username) && "password".equals(password)){
+                    cardLayout.show(cardPanel, "salesReport");
+                }
+                else {
                     JOptionPane.showMessageDialog(ECommerceApp.this, "Invalid credentials");
                 }
             }
@@ -56,7 +59,7 @@ public class ECommerceApp extends JFrame {
                 cardLayout.show(cardPanel, "signUpPage");
             }
         });
-    // Create Signup Page
+        // Create Signup Page
         signUpPage = new SignUpPage();
         signUpPage.setSignupListener(new SignUpListener() {
             @Override
@@ -80,6 +83,9 @@ public class ECommerceApp extends JFrame {
             @Override
             public void onViewCart() {
                 cardLayout.show(cardPanel, "shoppingCartPage");
+            }
+            public void onLogOut(){
+                cardLayout.show(cardPanel, "loginSignupPage");
             }
         });
 
@@ -123,6 +129,14 @@ public class ECommerceApp extends JFrame {
             }
         });
 
+        // Create Sales Report Page
+        salesReport = new SalesReport();
+        salesReport.setSalesReportListener((new SalesReportListener(){
+            public void onLogOut(){
+                cardLayout.show(cardPanel, "loginSignupPage");
+            }
+        }));
+
         // Add pages to card panel
         cardPanel.add(loginSignupPage, "loginSignupPage");
         cardPanel.add(inventoryPage, "inventoryPage");
@@ -130,6 +144,7 @@ public class ECommerceApp extends JFrame {
         cardPanel.add(confirmationPage, "confirmationPage");
         cardPanel.add(receiptPage, "receiptPage");
         cardPanel.add(signUpPage, "signUpPage");
+        cardPanel.add(salesReport, "salesReport");
 
         // Show login/signup page initially
         cardLayout.show(cardPanel, "loginSignupPage");
@@ -192,6 +207,7 @@ interface SignUpListener {
 interface InventoryListener {
     void onAddToCart(Item item);
     void onViewCart();
+    void onLogOut();
 }
 
 interface CartListener {
@@ -206,6 +222,10 @@ interface ConfirmationListener {
 
 interface ReceiptListener {
     void onReturn();
+}
+
+interface SalesReportListener{
+    void onLogOut();
 }
 
 class LoginSignupPage extends JPanel {
@@ -303,6 +323,7 @@ class InventoryPage extends JPanel {
     private JList<Item> itemList;
     private JButton addToCartButton;
     private JButton viewCartButton;
+    private JButton logOutButton;
 
     private List<Item> inventory;
     private InventoryListener listener;
@@ -339,10 +360,18 @@ class InventoryPage extends JPanel {
                 listener.onViewCart();
             }
         });
+        logOutButton = new JButton("Log Out");
+        logOutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                listener.onLogOut();
+            }
+        });
 
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(addToCartButton);
         buttonPanel.add(viewCartButton);
+        buttonPanel.add(logOutButton);
 
         add(new JScrollPane(itemList), BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
@@ -477,4 +506,18 @@ class ReceiptPage extends JPanel {
     public void setReceiptListener(ReceiptListener listener) {
         this.listener = listener;
     }
+}
+
+class SalesReport extends JPanel {
+    private JButton returnButton;
+    private SalesReportListener listener;
+
+    public SalesReport(){
+
+    }
+
+    public void setSalesReportListener(SalesReportListener listener){
+        this.listener = listener;
+    }
+
 }
