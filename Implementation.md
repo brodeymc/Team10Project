@@ -28,3 +28,5 @@ Welcome to Computer World our E-Commerce computer parts store! This Java-based a
 - This can be run on all of the following operating systems:
   - Apple macOs
   - Microsoft Windows
+
+### Cloning Steps
