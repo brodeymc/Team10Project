@@ -522,7 +522,7 @@ class InventoryPage extends JPanel {
             setText("<html><b>" + value.getName() + "</b><br/>" +
                     "<i>" + value.getDescription() + "</i><br/>" +
                     "Price: $" + value.getPrice() + "<br/>" +
-                    "<img src='" + value.getImagePath() + "' width='100' height='100'/>" +
+                    "<img src='" + getClass().getClassLoader().getResource(value.getImagePath()) + "' width='100' height='100'/>" +
                     "</html>");
             setOpaque(true);
             setBackground(isSelected ? list.getSelectionBackground() : list.getBackground());
