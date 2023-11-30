@@ -3,7 +3,7 @@ Welcome to Computer World our E-Commerce computer parts store! This Java-based a
 
 ## Table of Contents
 - [General Information](https://github.com/brodeymc/Team10Project/blob/main/Implementation.md#general-informartion)
-- [Technologies Used]()
+- [Technologies Used](https://github.com/brodeymc/Team10Project/blob/main/Implementation.md#version-1-technology)
 - [Features]()
 - [Environment Requirements]()
 
