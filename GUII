@@ -509,10 +509,27 @@ class ReceiptPage extends JPanel {
 }
 
 class SalesReport extends JPanel {
-    private JButton returnButton;
+    private JButton logOutButton;
     private SalesReportListener listener;
 
-    public SalesReport(){
+    public SalesReport() {
+        setLayout(new BorderLayout());
+
+
+
+        logOutButton = new JButton("Log Out");
+        logOutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                listener.onLogOut();
+            }
+        });
+
+
+        add(new JScrollPane(), BorderLayout.CENTER);
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(logOutButton);
+        add(buttonPanel, BorderLayout.SOUTH);
 
     }
 
