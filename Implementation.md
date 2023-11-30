@@ -51,16 +51,35 @@ The following steps all assume that you have an IDE for whatever language you pl
     - Make sure your project SDK is set to JDK 8 or later:
     - Open IntelliJ IDEA settings (File -> Project Structure).
     - Under "Project," ensure the Project SDK is set to JDK 8 or later.
-7. Build and Run:
+7. Download [MySQL Connector](https://www.mysql.com/products/connector/)
+    - Download the version of MySQL connector for your device.
+    - Unzip the file
+    - Create a directory in the ECommerceApp on IntelliJ
+    - Insert the connector .jar file
+    - Right click on the .jar file and select Add As Library option - This will fix error where there is no driver available
+8. Configure Database Information
+    - Depending on the name of your database and driver, as well as if you have a username or password, you may need to change the ones input into the java code.
+    - Change "jdbc:mysql://localhost:3306/mysql" to your database address.
+    - Change "bmcginn5" to your username, or remove if you do not have one.
+    - Change "Bm1964125868!" to your password, or remove if you do not have one.
+    - Change "com.mysql.cj.jdbc.Driver" to the address of your driver (this can be found in the database properties in IntelliJ).
+9. Build and Run:
     - In IntelliJ, navigate to the ECommerceApp class (src -> main -> ECommerceApp.java).
     - Right-click on the file and select "Run ECommerceApp.main()" or use the green arrow next to the main method.
-8. Test User Authentication:
+10. Test User Authentication:
     - In the application's login page:
     - Use the username: user and password: password for regular user access.
     - Use the username: admin and password: password for admin/sales report access.
-9. Explore and Use the Application:
+11. Explore and Use the Application:
     - Explore the inventory, add items to the shopping cart, and proceed through the checkout process.
     - For admin access, log in with admin credentials and explore the sales report.
+   
+Version 1.0 Bugs/Issues - 
+1. Images do not currently appear in the inventory.
+2. If a username is registered which matches one currently in the database, it will cause an error.
+3. Receipt and Sales Report pages currently do not show information.
+  
+  
 
 
 
