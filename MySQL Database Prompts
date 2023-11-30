@@ -1,0 +1,54 @@
+# Run each create table function in order, then enter each insert function in order
+
+CREATE TABLE users (
+   user_id INT AUTO_INCREMENT PRIMARY KEY,
+   username VARCHAR(255) NOT NULL UNIQUE,
+   password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE admins (
+    admin_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE inventory (
+    inventory_id INT AUTO_INCREMENT PRIMARY KEY,
+    item_title VARCHAR(255) NOT NULL,
+    item_description VARCHAR(255),
+    item_price DECIMAL(10, 2) NOT NULL,
+    image_path VARCHAR(255),
+    is_sold bool NOT NULL
+);
+
+CREATE TABLE sale (
+    sale_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE sale_items (
+    sale_id INT,
+    inventory_id INT,
+    PRIMARY KEY (sale_id, inventory_id),
+    FOREIGN KEY (sale_id) REFERENCES sale(sale_id),
+    FOREIGN KEY (inventory_id) REFERENCES inventory(inventory_id)
+);
+
+INSERT INTO users
+VALUES (1, 'user', 'password'),
+(2, 'saleTest', 'password');
+
+INSERT INTO admins
+VALUES (1, 'admin', 'password');
+
+INSERT INTO inventory
+VALUES (1, 'Nvidia GEFORCE RTX 3080', 'High performance Gaming Graphics card', 400.99, 'lib/3080.jpg', 0),
+(2, 'AMD Ryzen 5500', 'Mid-level gaming processor, can handle most newer games', 129.99, 'lib/ryzen.jpg', 0),
+(3, 'Asus B550 Motherboard', 'Affordable gaming motherboard', 85.00, 'item3.jpg', 1);
+
+INSERT INTO sale
+VALUES (1, 2);
+
+INSERT INTO sale_items
+VALUES (1, 3);
