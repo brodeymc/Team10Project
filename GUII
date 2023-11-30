@@ -60,8 +60,12 @@ public class ECommerceApp extends JFrame {
         signUpPage = new SignUpPage();
         signUpPage.setSignupListener(new SignUpListener() {
             @Override
-            public void onSignUp() {
-                cardLayout.show(cardPanel, "inventoryPage");
+            public void onSignUp(String username, String password) {
+                if (password.length() >= 6) {
+                    cardLayout.show(cardPanel, "inventoryPage");
+                } else {
+                    JOptionPane.showMessageDialog(ECommerceApp.this, "Password must be at least 6 characters");
+                }
             }
         });
         // Create Inventory page
@@ -182,7 +186,7 @@ interface LoginSignupListener {
     void onSignup();
 }
 interface SignUpListener {
-    void onSignUp();
+    void onSignUp(String username, String password);
 }
 
 interface InventoryListener {
@@ -280,7 +284,9 @@ class SignUpPage extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                listener.onSignUp();
+                String username = usernameField.getText();
+                char[] password = passwordField.getPassword();
+                listener.onSignUp(username, new String(password));
             }
         });
 
