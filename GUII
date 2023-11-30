@@ -121,9 +121,7 @@ public class ECommerceApp extends JFrame {
             }
         });
 
-        // Create Receipt page.. For the receipt page to actually be read I had to give it the inventory. Now 
-it can pull from the shoppig cart so we just need to make sure out items have prices listed when added to cart for a toal
-we also need to add in tax. 6%
+        // Create Receipt page
         receiptPage = new ReceiptPage(shoppingCart);
         receiptPage.setReceiptListener(new ReceiptListener() {
             @Override
@@ -404,6 +402,7 @@ class ShoppingCartPage extends JPanel {
     private DefaultListModel<Item> cartListModel;
     private JList<Item> cartList;
     private JButton checkoutButton;
+    private JLabel showPrice;
 
     private JButton cartReturnButton;
 
@@ -432,20 +431,28 @@ class ShoppingCartPage extends JPanel {
                 listener.onReturn();
             }
         });
+        showPrice = new JLabel("Total $0.00");
 
         add(new JScrollPane(cartList), BorderLayout.CENTER);
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(checkoutButton);
         buttonPanel.add(cartReturnButton);
+        buttonPanel.add(showPrice);
         add(buttonPanel, BorderLayout.SOUTH);
 
+        updateCart();
     }
 
     public void updateCart() {
         cartListModel.clear();
+        double Price =0;
         for (Item item : shoppingCart) {
             cartListModel.addElement(item);
+            Price+=item.getPrice();
         }
+        double Tax= Price * 0.06;
+        double priceWithTax = Price + Tax;
+        showPrice.setText(String.format("Total: %.2f (incl. 6%% tax: %.2f)", priceWithTax, Tax));
     }
 
     public void setCartListener(CartListener listener) {
