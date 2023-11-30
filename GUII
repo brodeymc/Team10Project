@@ -51,7 +51,7 @@ public class ECommerceApp extends JFrame {
                 if ("user".equals(username) && "password".equals(password)) {
                     cardLayout.show(cardPanel, "inventoryPage");
                 } else if ("admin".equals(username) && "password".equals(password)){
-
+                    generateSalesReport();
                     cardLayout.show(cardPanel, "salesReport");
                 }
                 else {
@@ -125,7 +125,7 @@ public class ECommerceApp extends JFrame {
                 shoppingCart.clear();
                 shoppingCartPage.updateCart();
 
-                
+
             }
 
             @Override
@@ -166,6 +166,15 @@ public class ECommerceApp extends JFrame {
 
         // Add card panel to the frame
         add(cardPanel);
+    }
+    private void generateSalesReport(){
+        StringBuilder report = new StringBuilder("Sales Report:\n\n");
+
+        for(ItemsSold sold: itemsSolds){
+            report.append("Item: ").append(sold.getItemN()).append("\n");
+            report.append("Price: $").append(sold.getItemP()).append("\n\n");
+        }
+        salesReport.setSalesReportText(report.toString());
     }
 
     private static class ItemsSold{
@@ -585,7 +594,7 @@ class ConfirmationPage extends JPanel {
         return expirationF.getText();
     }
 
-    public String getVV() {
+    public String getCVV() {
         return cvvF.getText();
     }
 
@@ -689,5 +698,8 @@ class SalesReport extends JPanel {
     public void setSalesReportListener(SalesReportListener listener) {
         this.listener = listener;
     }
-}   
+    public void setSalesReportText(String text){
+        salesReportA.setText(text);
+    }
+}
 
