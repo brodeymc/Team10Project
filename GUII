@@ -206,13 +206,21 @@ class Item {
     private String description;
     private double price;
     private String imagePath;
-
+    private int quantity;
 
     public Item(String name, String description, double price, String imagePath) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.imagePath = imagePath;
+        this.quantity = 1;
+    }
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -488,7 +496,7 @@ class ShoppingCartPage extends JPanel {
         double Price =0;
         for (Item item : shoppingCart) {
             cartListModel.addElement(item);
-            Price+=item.getPrice();
+            Price+=item.getPrice() * item.getQuantity();
         }
         double Tax= Price * 0.06;
         double priceWithTax = Price + Tax;
@@ -652,11 +660,11 @@ class ReceiptPage extends JPanel {
         double tAmount = 0;
         receiptT.append("Receipt: \n\n");
         for (Item item : purchasedI) {
-            receiptT.append(item.getName()).append("\n");
+            receiptT.append(item.getName()).append(" (Quantity: ").append(item.getQuantity()).append(")\n");
             receiptT.append("Description: ").append(item.getDescription()).append("\n");
             receiptT.append("Price :$").append(item.getPrice()).append("\n");
             receiptT.append("\n");
-            tAmount += item.getPrice();
+            tAmount += item.getPrice() * item.getQuantity();
         }
         receiptT.append("Total: $").append(tAmount).append("\n");
         receiptArea.setText(receiptT.toString());
