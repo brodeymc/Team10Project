@@ -15,6 +15,7 @@ public class ECommerceApp extends JFrame {
     private ConfirmationPage confirmationPage;
     private ReceiptPage receiptPage;
     private SalesReport salesReport;
+    private List<ItemsSold> itemsSolds;
     private List<Item> inventory;
     private List<Item> shoppingCart;
 
@@ -23,6 +24,8 @@ public class ECommerceApp extends JFrame {
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+
+        itemsSolds = new ArrayList<>();
 
         // Initialize inventory
         inventory = new ArrayList<>();
@@ -48,6 +51,7 @@ public class ECommerceApp extends JFrame {
                 if ("user".equals(username) && "password".equals(password)) {
                     cardLayout.show(cardPanel, "inventoryPage");
                 } else if ("admin".equals(username) && "password".equals(password)){
+
                     cardLayout.show(cardPanel, "salesReport");
                 }
                 else {
@@ -110,11 +114,18 @@ public class ECommerceApp extends JFrame {
         confirmationPage.setConfirmationListener(new ConfirmationListener() {
             @Override
             public void onConfirm() {
+                //generating the sales report based off of what is inside the shopping cart when confirming order.
+
+                for(Item item :shoppingCart){
+                    itemsSolds.add(new ItemsSold(item.getName(), item.getPrice()));
+                }
                 // Implement order processing logic, we need to add information on this page
                 receiptPage= new ReceiptPage(shoppingCart);
                 cardLayout.show(cardPanel, "receiptPage");
                 shoppingCart.clear();
                 shoppingCartPage.updateCart();
+
+                
             }
 
             @Override
@@ -140,6 +151,7 @@ public class ECommerceApp extends JFrame {
             }
         }));
 
+
         // Add pages to card panel
         cardPanel.add(loginSignupPage, "loginSignupPage");
         cardPanel.add(inventoryPage, "inventoryPage");
@@ -156,9 +168,26 @@ public class ECommerceApp extends JFrame {
         add(cardPanel);
     }
 
+    private static class ItemsSold{
+        private String itemN;
+        private double itemP;
+
+        public ItemsSold(String itemN, double itemP){
+            this.itemN = itemN;
+            this.itemP = itemP;
+        }
+        public String getItemN(){
+            return itemN;
+        }
+        public double getItemP(){
+            return itemP;
+        }
+    }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new ECommerceApp().setVisible(true);
+            ECommerceApp app = new ECommerceApp();
+            app.setVisible(true);
         });
     }
 }
@@ -628,12 +657,18 @@ class ReceiptPage extends JPanel {
 
 class SalesReport extends JPanel {
     private JButton logOutButton;
+    private JTextArea salesReportA;
     private SalesReportListener listener;
+
 
     public SalesReport() {
         setLayout(new BorderLayout());
 
+        salesReportA = new JTextArea();
+        salesReportA.setEditable(false);
 
+        JScrollPane scroll = new JScrollPane(salesReportA);
+        add(scroll, BorderLayout.CENTER);
 
         logOutButton = new JButton("Log Out");
         logOutButton.addActionListener(new ActionListener() {
@@ -651,8 +686,8 @@ class SalesReport extends JPanel {
 
     }
 
-    public void setSalesReportListener(SalesReportListener listener){
+    public void setSalesReportListener(SalesReportListener listener) {
         this.listener = listener;
     }
+}   
 
-}
