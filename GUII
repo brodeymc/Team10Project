@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.*;
 
 public class ECommerceApp extends JFrame {
     private CardLayout cardLayout;
@@ -20,6 +21,40 @@ public class ECommerceApp extends JFrame {
     private List<Item> shoppingCart;
 
     public ECommerceApp() {
+        PreparedStatement pst;
+        Connection conn;
+        ResultSet resultSet = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql", "bmcginn5", "Bm1964125868!");
+            System.out.println("Connection successful");
+
+            inventory = new ArrayList<>();
+
+            String query = "SELECT * FROM inventory";
+            pst = conn.prepareStatement(query);
+
+            resultSet = pst.executeQuery();
+
+            // Adds inventory from database
+            while(resultSet.next()){
+                int id = resultSet.getInt("inventory_id");
+                String name = resultSet.getString("item_title");
+                String description = resultSet.getString("item_description");
+                float price = resultSet.getFloat("item_price");
+                String imagePath = resultSet.getString("image_path");
+                boolean isSold = resultSet.getBoolean("is_sold");
+                if (!isSold) {
+                    inventory.add(new Item(name, description, price, imagePath));
+                }
+
+            }
+
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (SQLException ex){
+            ex.printStackTrace();
+        }
         setTitle("Computer World");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,13 +62,7 @@ public class ECommerceApp extends JFrame {
 
         itemsSolds = new ArrayList<>();
 
-        // Initialize inventory
-        inventory = new ArrayList<>();
-        inventory.add(new Item("Nvidia GEFORCE RTX 3080", "High performance Gaming Graphics card", 400.99, "images/3080.PNG"));
-        inventory.add(new Item("AMD Ryzen 5500", "Mid-level gaming processor, can handle most newer games", 129.99, "images/Ryzen.PNG"));
-        inventory.add(new Item("Asus B550 Motherboard", "Affordable gaming motherboard", 85.00, "images/motherboard.PNG"));
-        inventory.add(new Item("Samsung- 870 EVO 1TB Internal SSD SATA","Allows users to store up to 1000 extra Gbs of space",92.99,"images/SSD.PNG"));
-        inventory.add(new Item("HyperX Cloud 2 - wired Gaming Headset", "Designed for comfort, provides excellent sound for an affordable cost",99.99,"images/hyperX.PNG"));
+       
 
         // Initialize shopping cart
         shoppingCart = new ArrayList<>();
@@ -44,19 +73,44 @@ public class ECommerceApp extends JFrame {
 
         // Create Login page
         loginSignupPage = new LoginSignupPage();
-        loginSignupPage.setLoginSignupListener(new LoginSignupListener() {
+         loginSignupPage.setLoginSignupListener(new LoginSignupListener() {
             @Override
             public void onLogin(String username, String password) {
+
+                try {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql", "bmcginn5", "Bm1964125868!");
+                    System.out.println("Connection successful");
+                    PreparedStatement pst;
+                    ResultSet resultSet;
+
+                    String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+
+                    pst = conn.prepareStatement(query);
+                    pst.setString(1, username);
+                    pst.setString(2, password);
+                    resultSet = pst.executeQuery();
+
+                    if(resultSet.next()){
+                        cardLayout.show(cardPanel, "inventoryPage");
+                    }else if ("admin".equals(username) && "password".equals(password)){
+                        cardLayout.show(cardPanel, "salesReport");
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(ECommerceApp.this, "Invalid credentials");
+                    }
+
+                } catch (ClassNotFoundException ex) {
+                    ex.printStackTrace();
+                } catch (SQLException ex){
+                    ex.printStackTrace();
+                }
+
                 // Simplified authentication, We need to add more advanced authentication
-                if ("user".equals(username) && "password".equals(password)) {
-                    cardLayout.show(cardPanel, "inventoryPage");
-                } else if ("admin".equals(username) && "password".equals(password)){
-                    generateSalesReport();
-                    cardLayout.show(cardPanel, "salesReport");
-                }
-                else {
-                    JOptionPane.showMessageDialog(ECommerceApp.this, "Invalid credentials");
-                }
+
+
+
             }
 
             @Override
@@ -69,9 +123,41 @@ public class ECommerceApp extends JFrame {
         signUpPage = new SignUpPage();
         signUpPage.setSignupListener(new SignUpListener() {
             @Override
-            public void onSignUp(String username, String password) {
-                if (password.length() >= 6) {
+            public void onSignUp(String username1, String password1) {
+                if (password1.length() >= 6) {
                     cardLayout.show(cardPanel, "inventoryPage");
+                    try {
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql", "bmcginn5", "Bm1964125868!");
+                        System.out.println("Connection successful");
+                        PreparedStatement pst;
+                        ResultSet resultSet;
+
+                        String query = "INSERT INTO users (username, password)" +
+                                "VALUES (?, ?)";
+
+
+
+                        pst = conn.prepareStatement(query);
+
+                        pst.setString(1, username1);
+                        pst.setString(2, password1);
+                        int rowsAffected = pst.executeUpdate();
+                        if(rowsAffected > 0){
+                            JOptionPane.showMessageDialog(ECommerceApp.this, "Registration Succesful");
+                            cardLayout.show(cardPanel, "inventoryPage");
+                        }
+                        else {
+                            JOptionPane.showMessageDialog(ECommerceApp.this, "Registration Fail");
+                        }
+
+
+                    } catch (ClassNotFoundException ex) {
+                        ex.printStackTrace();
+                    } catch (SQLException ex){
+                        ex.printStackTrace();
+                    }
+
                 } else {
                     JOptionPane.showMessageDialog(ECommerceApp.this, "Password must be at least 6 characters");
                 }
