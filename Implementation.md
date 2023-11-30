@@ -2,7 +2,7 @@
 Welcome to Computer World our E-Commerce computer parts store! This Java-based application provides a user-friendly interface for buying computer parts. Users can create an account, browse through a variety of computer components, and make purchases securely. The application uses MySQL for data storage and Swing for the graphical user interface.
 
 ## Table of Contents
-- [General Information]()
+- [General Information](https://github.com/brodeymc/Team10Project/blob/main/Implementation.md#general-informartion)
 - [Technologies Used]()
 - [Features]()
 - [Environment Requirements]()
