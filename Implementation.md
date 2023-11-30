@@ -41,7 +41,7 @@ The following steps all assume that you have an IDE for whatever language you pl
     - Connect to MySQL and create a new database for the application. 
 3. Database Schema Scripts:
     - Navigate to the database-scripts folder in the project
-    - Run the SQL scripts in numerical order to set up the necessary tables and data. You can use a MySQL client
+    - Run the SQL scripts in numerical order to set up the necessary tables and data. You can use a MySQL client or run it in IntelliJ.
 4. Database Configuration:
     - Open the src/main/resources/config.properties file using your favorite text editor or IntelliJ IDEA.
 5. Open Project in IntelliJ IDEA:
