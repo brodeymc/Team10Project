@@ -6,7 +6,7 @@ Welcome to Computer World our E-Commerce computer parts store! This Java-based a
 - [Technologies Used](https://github.com/brodeymc/Team10Project/blob/main/Implementation.md#version-1-technology)
 - [Features](https://github.com/brodeymc/Team10Project/blob/main/Implementation.md#features)
 - [Environment Requirements](https://github.com/brodeymc/Team10Project/blob/main/Implementation.md#environment-requirements)
-- [Application Cloning Steps](https://github.com/brodeymc/Team10Project/edit/main/Implementation.md#cloning-steps)
+- [Application Cloning Steps](https://github.com/brodeymc/Team10Project/blob/main/Implementation.md#cloning-steps)
 
 ### General Informartion
 - We aimed to make something that people could use to find every and any computer part
