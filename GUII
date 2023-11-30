@@ -121,7 +121,9 @@ public class ECommerceApp extends JFrame {
             }
         });
 
-        // Create Receipt page
+        // Create Receipt page.. For the receipt page to actually be read I had to give it the inventory. Now 
+it can pull from the shoppig cart so we just need to make sure out items have prices listed when added to cart for a toal
+we also need to add in tax. 6%
         receiptPage = new ReceiptPage(shoppingCart);
         receiptPage.setReceiptListener(new ReceiptListener() {
             @Override
