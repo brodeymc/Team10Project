@@ -32,3 +32,35 @@ Welcome to Computer World our E-Commerce computer parts store! This Java-based a
   - Microsoft Windows
 
 ### Cloning Steps
+The following steps all assume that you have an IDE for whatever language you plan on coding in and as well as access to all the other proper technology, they will also be based off our experience and the technologies we used:
+1. Clone the repository
+2. Set Up MySQL Database:
+    - Install MySQL on your machine if not already installed, you can download it from MySQL Downloads.
+    - Start your MySQL server.
+    - Connect to MySQL and create a new database for the application. 
+3. Database Schema Scripts:
+    - Navigate to the database-scripts folder in the project
+    - Run the SQL scripts in numerical order to set up the necessary tables and data. You can use a MySQL client
+4. Database Configuration:
+    - Open the src/main/resources/config.properties file using your favorite text editor or IntelliJ IDEA.
+5. Open Project in IntelliJ IDEA:
+    - Open IntelliJ IDEA.
+    - Choose "Open" from the welcome screen and select the cloned ecommerce-computer-parts directory.
+6. Configure Project SDK:
+    - Make sure your project SDK is set to JDK 8 or later:
+    - Open IntelliJ IDEA settings (File -> Project Structure).
+    - Under "Project," ensure the Project SDK is set to JDK 8 or later.
+7. Build and Run:
+    - In IntelliJ, navigate to the ECommerceApp class (src -> main -> ECommerceApp.java).
+    - Right-click on the file and select "Run ECommerceApp.main()" or use the green arrow next to the main method.
+8. Test User Authentication:
+    - In the application's login page:
+    - Use the username: user and password: password for regular user access.
+    - Use the username: admin and password: password for admin/sales report access.
+9. Explore and Use the Application:
+    - Explore the inventory, add items to the shopping cart, and proceed through the checkout process.
+    - For admin access, log in with admin credentials and explore the sales report.
+
+
+
+
